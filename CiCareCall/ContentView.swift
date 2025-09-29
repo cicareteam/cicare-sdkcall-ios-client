@@ -47,7 +47,7 @@ struct ContentView: View {
     }
     
     func makeCall() {
-        CicareSdkCall.shared.setAPI(baseUrl: "https://gsm-sdk.c-icare.cc:8443", token: "a1b2c3d4e5f60718293a4b5c6d7e8f90123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef")
+        CicareSdkCall.shared.setAPI(baseUrl: "", token: "")
         
         CicareSdkCall.shared.outgoing(callerId: "4", callerName: "Anas", callerAvatar: "", calleeId: "2", calleeName: "Ricky", calleeAvatar: "https://avatar.iran.liara.run/public/boy", checkSum: "asdfasdf", metaData: ["call_title":"Call Gratis", "call_not_found":"Call not found"])
     }
