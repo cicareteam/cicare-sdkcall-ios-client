@@ -1,0 +1,6 @@
+framework module CiCareSDKCall {
+  umbrella header "CiCareSDKCallIOS-umbrella.h"
+
+  export *
+  module * { export * }
+}

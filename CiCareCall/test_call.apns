@@ -1,0 +1,20 @@
+{
+  "Simulator Target Bundle": "cc.cicare.CiCareCall",
+  "aps": {
+    "alert": {
+      "title": "Incoming Call",
+      "body": "Call from Halis"
+    },
+    "sound": "default",
+    "category": "incoming",
+    "content-available": 1,
+    "mutable-content": 1
+  },
+  "callerId": "2",
+  "callerName": "Halis",
+  "calleeId": "3",
+  "calleeName": "Anas",
+  "checkSum": "asdfasdf",
+  "server": "https://sip-gw.c-icare.cc:8443",
+  "type": "voip"
+}

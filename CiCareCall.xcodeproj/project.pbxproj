@@ -6,6 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		46D7C5702E8233980062778B /* Pods_CiCareCall.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A619C5552854310A15EBCA2 /* Pods_CiCareCall.framework */; };
+		6096A3479430FD39744F6213 /* Pods_CiCareCall_CiCareCallUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 833C7C568EA022B2EA6C70E2 /* Pods_CiCareCall_CiCareCallUITests.framework */; };
+		7802780D81CC5F2D5F10583E /* Pods_CiCareCallTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69ABE2B6270C9AE14FF9A275 /* Pods_CiCareCallTests.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		467C90842E4F39900079DA2F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -24,14 +30,36 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2A619C5552854310A15EBCA2 /* Pods_CiCareCall.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CiCareCall.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		467C90762E4F398D0079DA2F /* CiCareCall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CiCareCall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		467C90832E4F39900079DA2F /* CiCareCallTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CiCareCallTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		467C908D2E4F39900079DA2F /* CiCareCallUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CiCareCallUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		54B8DD9A02DB74CEAECB49D7 /* Pods-CiCareCall-CiCareCallUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CiCareCall-CiCareCallUITests.debug.xcconfig"; path = "Target Support Files/Pods-CiCareCall-CiCareCallUITests/Pods-CiCareCall-CiCareCallUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		6483A4E9F10461A5C46D94DF /* Pods-CiCareCall.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CiCareCall.debug.xcconfig"; path = "Target Support Files/Pods-CiCareCall/Pods-CiCareCall.debug.xcconfig"; sourceTree = "<group>"; };
+		69ABE2B6270C9AE14FF9A275 /* Pods_CiCareCallTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CiCareCallTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		833C7C568EA022B2EA6C70E2 /* Pods_CiCareCall_CiCareCallUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CiCareCall_CiCareCallUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0D56B8036C3A92BCA626CAB /* Pods-CiCareCall-CiCareCallUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CiCareCall-CiCareCallUITests.release.xcconfig"; path = "Target Support Files/Pods-CiCareCall-CiCareCallUITests/Pods-CiCareCall-CiCareCallUITests.release.xcconfig"; sourceTree = "<group>"; };
+		CF657A4983D53C2842573514 /* Pods-CiCareCallTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CiCareCallTests.debug.xcconfig"; path = "Target Support Files/Pods-CiCareCallTests/Pods-CiCareCallTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F10852BBB4945FE89F779E07 /* Pods-CiCareCallTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CiCareCallTests.release.xcconfig"; path = "Target Support Files/Pods-CiCareCallTests/Pods-CiCareCallTests.release.xcconfig"; sourceTree = "<group>"; };
+		F764E6DE0154A6C4AC4CE138 /* Pods-CiCareCall.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CiCareCall.release.xcconfig"; path = "Target Support Files/Pods-CiCareCall/Pods-CiCareCall.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		46736A912E51D2A200DB8649 /* Exceptions for "CiCareCall" folder in "CiCareCall" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 467C90752E4F398D0079DA2F /* CiCareCall */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		467C90782E4F398D0079DA2F /* CiCareCall */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				46736A912E51D2A200DB8649 /* Exceptions for "CiCareCall" folder in "CiCareCall" target */,
+			);
 			path = CiCareCall;
 			sourceTree = "<group>";
 		};
@@ -52,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46D7C5702E8233980062778B /* Pods_CiCareCall.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7802780D81CC5F2D5F10583E /* Pods_CiCareCallTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6096A3479430FD39744F6213 /* Pods_CiCareCall_CiCareCallUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,7 +109,9 @@
 				467C90782E4F398D0079DA2F /* CiCareCall */,
 				467C90862E4F39900079DA2F /* CiCareCallTests */,
 				467C90902E4F39900079DA2F /* CiCareCallUITests */,
+				467C90B22E4F3C840079DA2F /* Frameworks */,
 				467C90772E4F398D0079DA2F /* Products */,
+				E53A5178E22F198BF03E41C0 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -92,6 +125,29 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		467C90B22E4F3C840079DA2F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2A619C5552854310A15EBCA2 /* Pods_CiCareCall.framework */,
+				833C7C568EA022B2EA6C70E2 /* Pods_CiCareCall_CiCareCallUITests.framework */,
+				69ABE2B6270C9AE14FF9A275 /* Pods_CiCareCallTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E53A5178E22F198BF03E41C0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6483A4E9F10461A5C46D94DF /* Pods-CiCareCall.debug.xcconfig */,
+				F764E6DE0154A6C4AC4CE138 /* Pods-CiCareCall.release.xcconfig */,
+				54B8DD9A02DB74CEAECB49D7 /* Pods-CiCareCall-CiCareCallUITests.debug.xcconfig */,
+				B0D56B8036C3A92BCA626CAB /* Pods-CiCareCall-CiCareCallUITests.release.xcconfig */,
+				CF657A4983D53C2842573514 /* Pods-CiCareCallTests.debug.xcconfig */,
+				F10852BBB4945FE89F779E07 /* Pods-CiCareCallTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -99,9 +155,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 467C90972E4F39900079DA2F /* Build configuration list for PBXNativeTarget "CiCareCall" */;
 			buildPhases = (
+				5338DE540288BD411A0C97E5 /* [CP] Check Pods Manifest.lock */,
 				467C90722E4F398D0079DA2F /* Sources */,
 				467C90732E4F398D0079DA2F /* Frameworks */,
 				467C90742E4F398D0079DA2F /* Resources */,
+				0D725AB85B2B7FB0BB462573 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -111,8 +169,6 @@
 				467C90782E4F398D0079DA2F /* CiCareCall */,
 			);
 			name = CiCareCall;
-			packageProductDependencies = (
-			);
 			productName = CiCareCall;
 			productReference = 467C90762E4F398D0079DA2F /* CiCareCall.app */;
 			productType = "com.apple.product-type.application";
@@ -121,6 +177,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 467C909A2E4F39900079DA2F /* Build configuration list for PBXNativeTarget "CiCareCallTests" */;
 			buildPhases = (
+				0A52DAF1956A87A87ABD33F2 /* [CP] Check Pods Manifest.lock */,
 				467C907F2E4F39900079DA2F /* Sources */,
 				467C90802E4F39900079DA2F /* Frameworks */,
 				467C90812E4F39900079DA2F /* Resources */,
@@ -134,8 +191,6 @@
 				467C90862E4F39900079DA2F /* CiCareCallTests */,
 			);
 			name = CiCareCallTests;
-			packageProductDependencies = (
-			);
 			productName = CiCareCallTests;
 			productReference = 467C90832E4F39900079DA2F /* CiCareCallTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -144,9 +199,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 467C909D2E4F39900079DA2F /* Build configuration list for PBXNativeTarget "CiCareCallUITests" */;
 			buildPhases = (
+				35A946938C8182FEDC793EE1 /* [CP] Check Pods Manifest.lock */,
 				467C90892E4F39900079DA2F /* Sources */,
 				467C908A2E4F39900079DA2F /* Frameworks */,
 				467C908B2E4F39900079DA2F /* Resources */,
+				13CE154927FDF1E64C7C9920 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -157,8 +214,6 @@
 				467C90902E4F39900079DA2F /* CiCareCallUITests */,
 			);
 			name = CiCareCallUITests;
-			packageProductDependencies = (
-			);
 			productName = CiCareCallUITests;
 			productReference = 467C908D2E4F39900079DA2F /* CiCareCallUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
@@ -230,6 +285,117 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0A52DAF1956A87A87ABD33F2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CiCareCallTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0D725AB85B2B7FB0BB462573 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CiCareCall/Pods-CiCareCall-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CiCareCall/Pods-CiCareCall-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CiCareCall/Pods-CiCareCall-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		13CE154927FDF1E64C7C9920 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CiCareCall-CiCareCallUITests/Pods-CiCareCall-CiCareCallUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CiCareCall-CiCareCallUITests/Pods-CiCareCall-CiCareCallUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CiCareCall-CiCareCallUITests/Pods-CiCareCall-CiCareCallUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		35A946938C8182FEDC793EE1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CiCareCall-CiCareCallUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5338DE540288BD411A0C97E5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CiCareCall-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		467C90722E4F398D0079DA2F /* Sources */ = {
@@ -390,13 +556,19 @@
 		};
 		467C90982E4F39900079DA2F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6483A4E9F10461A5C46D94DF /* Pods-CiCareCall.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CiCareCall/CiCareCall.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J458ZL5DNL;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CiCareCall/Info.plist;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Use for call action";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -417,13 +589,20 @@
 		};
 		467C90992E4F39900079DA2F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F764E6DE0154A6C4AC4CE138 /* Pods-CiCareCall.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CiCareCall/CiCareCallRelease.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J458ZL5DNL;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CiCareCall/Info.plist;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Use for call action";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -436,6 +615,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = cc.cicare.CiCareCall;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -444,6 +624,7 @@
 		};
 		467C909B2E4F39900079DA2F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF657A4983D53C2842573514 /* Pods-CiCareCallTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -462,6 +643,7 @@
 		};
 		467C909C2E4F39900079DA2F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F10852BBB4945FE89F779E07 /* Pods-CiCareCallTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -480,6 +662,7 @@
 		};
 		467C909E2E4F39900079DA2F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 54B8DD9A02DB74CEAECB49D7 /* Pods-CiCareCall-CiCareCallUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -496,6 +679,7 @@
 		};
 		467C909F2E4F39900079DA2F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B0D56B8036C3A92BCA626CAB /* Pods-CiCareCall-CiCareCallUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;

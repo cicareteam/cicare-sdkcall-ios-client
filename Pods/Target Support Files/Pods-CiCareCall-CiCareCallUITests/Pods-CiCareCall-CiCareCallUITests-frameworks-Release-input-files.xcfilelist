@@ -1,0 +1,6 @@
+${PODS_ROOT}/Target Support Files/Pods-CiCareCall-CiCareCallUITests/Pods-CiCareCall-CiCareCallUITests-frameworks.sh
+${BUILT_PRODUCTS_DIR}/CiCareSDKCallIOS/CiCareSDKCall.framework
+${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework
+${BUILT_PRODUCTS_DIR}/Socket.IO-Client-Swift/SocketIO.framework
+${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework
+${PODS_XCFRAMEWORKS_BUILD_DIR}/WebRTC-lib/WebRTC.framework/WebRTC
