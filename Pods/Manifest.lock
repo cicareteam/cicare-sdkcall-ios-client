@@ -1,36 +1,40 @@
 PODS:
-  - CiCareSDKCallIOS (1.2.0-rc.8.2):
+  - CiCareSDKCallIOS (1.2.1-rc.11):
     - CryptoSwift (= 1.8.4)
     - Socket.IO-Client-Swift (= 16.1.1)
     - Starscream (= 4.0.8)
     - WebRTC-lib (= 138.0.0)
   - CryptoSwift (1.8.4)
+  - FittedSheets (2.7.1)
   - Socket.IO-Client-Swift (16.1.1):
     - Starscream (~> 4.0.8)
   - Starscream (4.0.8)
   - WebRTC-lib (138.0.0)
 
 DEPENDENCIES:
-  - CiCareSDKCallIOS (from `CicareSdkCall/CiCareSDKCallIOS.podspec`)
+  - CiCareSDKCallIOS (from `../CicareSdkCall/CiCareSDKCallIOS.podspec`)
+  - FittedSheets
 
 SPEC REPOS:
   trunk:
     - CryptoSwift
+    - FittedSheets
     - Socket.IO-Client-Swift
     - Starscream
     - WebRTC-lib
 
 EXTERNAL SOURCES:
   CiCareSDKCallIOS:
-    :path: CicareSdkCall/CiCareSDKCallIOS.podspec
+    :path: "../CicareSdkCall/CiCareSDKCallIOS.podspec"
 
 SPEC CHECKSUMS:
-  CiCareSDKCallIOS: 0e446ee90415025d23e9e7af730f102dea502f35
+  CiCareSDKCallIOS: b12919957c504cc390c80eb3083e3d0dad99c320
   CryptoSwift: e64e11850ede528a02a0f3e768cec8e9d92ecb90
+  FittedSheets: 38ec85129bf5c970f99d4dba4fbf48185c5fa98a
   Socket.IO-Client-Swift: 3614bea82ba005df1c2ff01154f4004993e05ad7
   Starscream: 19b5533ddb925208db698f0ac508a100b884a1b9
   WebRTC-lib: c27ca48636290aad1df5f976ba5eab70aeff3dda
 
-PODFILE CHECKSUM: 4a0322bbce31c3ae98346eb32a3244221c8d2714
+PODFILE CHECKSUM: 390efbe6d89d0729cc76945c21149d8499984749
 
 COCOAPODS: 1.16.2

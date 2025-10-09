@@ -12,9 +12,13 @@ import CiCareSDKCall
 class VoipManager: NSObject, PKPushRegistryDelegate {
     static let shared = VoipManager()
     private var pushRegistry: PKPushRegistry!
+    public var userId: String?
     
     private override init() {
         super.init()
+    }
+    
+    public func regist() {
         pushRegistry = PKPushRegistry(queue: DispatchQueue.main)
         pushRegistry.delegate = self
         pushRegistry.desiredPushTypes = [.voIP]
@@ -26,7 +30,7 @@ class VoipManager: NSObject, PKPushRegistryDelegate {
         for type: PKPushType
     ) {
         let voipToken = pushCredentials.token.map { String(format: "%02x", $0) }.joined()
-        print("VoIP Token: \(voipToken)")
+        //print("VoIP Token: \(voipToken)")
         sendTokenToServer(voipToken)
         NotificationCenter.default.post(name: .voipTokenUpdated, object: voipToken)
     }
@@ -35,9 +39,6 @@ class VoipManager: NSObject, PKPushRegistryDelegate {
                       didReceiveIncomingPushWith payload: PKPushPayload,
                       for type: PKPushType,
                       completion: @escaping () -> Void) {
-        
-        
-        let cicare = CicareSdkCall.init()
 
         // Ambil data caller dari payload
         guard let aps = payload.dictionaryPayload["aps"] as? [String: Any],
@@ -46,13 +47,14 @@ class VoipManager: NSObject, PKPushRegistryDelegate {
             completion()
             return
         }
+        //SheetManager.shared.dismissActiveSheet()
         print("Incoming notification")
         var metaData:[String:String] = [:]
         let callerId: String = payload.dictionaryPayload["callerId"] as! String
         let avatar: String = payload.dictionaryPayload["callerAvatar"] as! String
         let callerName: String = payload.dictionaryPayload["callerName"] as! String
         metaData["alert_data"] = payload.dictionaryPayload["alert_data"] as? String
-        cicare.incoming(callerId: callerId, callerName: callerName, callerAvatar: avatar, calleeId: "", calleeName: "", calleeAvatar: "", checkSum: "", metaData: metaData) {
+        CicareSdkCall.shared.incoming(callerId: callerId, callerName: callerName, callerAvatar: avatar, calleeId: "", calleeName: "", calleeAvatar: "", checkSum: "", metaData: metaData) {
             print("message clicked")
         }
         completion() // jangan lupa panggil completion
@@ -76,7 +78,7 @@ class VoipManager: NSObject, PKPushRegistryDelegate {
             let body: [String: Any] = [
                 "device_token": token,
                 "type": "ios",
-                "user_id": "4" // optional if you have a logged in user
+                "user_id": self.userId // optional if you have a logged in user
             ]
 
             request.httpBody = try? JSONSerialization.data(withJSONObject: body)
@@ -87,7 +89,7 @@ class VoipManager: NSObject, PKPushRegistryDelegate {
                     return
                 }
                 if let httpResponse = response as? HTTPURLResponse {
-                    print("Token sent, server response: \(httpResponse.statusCode)")
+                    //print("Token sent, server response: \(httpResponse.statusCode)")
                 }
             }.resume()
         }

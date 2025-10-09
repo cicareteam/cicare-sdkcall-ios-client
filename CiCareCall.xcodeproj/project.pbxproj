@@ -34,6 +34,7 @@
 		467C90762E4F398D0079DA2F /* CiCareCall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CiCareCall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		467C90832E4F39900079DA2F /* CiCareCallTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CiCareCallTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		467C908D2E4F39900079DA2F /* CiCareCallUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CiCareCallUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		46D7C8B72E8A991C0062778B /* CicareSdkCall */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = CicareSdkCall; path = ../CicareSdkCall; sourceTree = SOURCE_ROOT; };
 		54B8DD9A02DB74CEAECB49D7 /* Pods-CiCareCall-CiCareCallUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CiCareCall-CiCareCallUITests.debug.xcconfig"; path = "Target Support Files/Pods-CiCareCall-CiCareCallUITests/Pods-CiCareCall-CiCareCallUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		6483A4E9F10461A5C46D94DF /* Pods-CiCareCall.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CiCareCall.debug.xcconfig"; path = "Target Support Files/Pods-CiCareCall/Pods-CiCareCall.debug.xcconfig"; sourceTree = "<group>"; };
 		69ABE2B6270C9AE14FF9A275 /* Pods_CiCareCallTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CiCareCallTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -106,6 +107,7 @@
 		467C906D2E4F398D0079DA2F = {
 			isa = PBXGroup;
 			children = (
+				46D7C8B72E8A991C0062778B /* CicareSdkCall */,
 				467C90782E4F398D0079DA2F /* CiCareCall */,
 				467C90862E4F39900079DA2F /* CiCareCallTests */,
 				467C90902E4F39900079DA2F /* CiCareCallUITests */,
@@ -160,6 +162,7 @@
 				467C90732E4F398D0079DA2F /* Frameworks */,
 				467C90742E4F398D0079DA2F /* Resources */,
 				0D725AB85B2B7FB0BB462573 /* [CP] Embed Pods Frameworks */,
+				46D7C9182E8BD6710062778B /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -373,6 +376,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		46D7C9182E8BD6710062778B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ -d \"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/WebRTC.framework\" ]; then\n    echo \"Generating dSYM for WebRTC.framework\"\n    dsymutil \"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/WebRTC.framework/WebRTC\" -o \"${BUILT_PRODUCTS_DIR}/WebRTC.framework.dSYM\"\nfi\n";
+		};
 		5338DE540288BD411A0C97E5 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -560,6 +580,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = CiCareCall/CiCareCall.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -568,7 +589,8 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CiCareCall/Info.plist;
-				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Use for call action";
+				INFOPLIST_KEY_NSCameraUsageDescription = "use for video call";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "use for call";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -578,7 +600,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.3.4;
 				PRODUCT_BUNDLE_IDENTIFIER = cc.cicare.CiCareCall;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -593,6 +615,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = CiCareCall/CiCareCallRelease.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
@@ -602,7 +625,8 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CiCareCall/Info.plist;
-				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Use for call action";
+				INFOPLIST_KEY_NSCameraUsageDescription = "use for video call";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "use for call";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -612,7 +636,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.3.4;
 				PRODUCT_BUNDLE_IDENTIFIER = cc.cicare.CiCareCall;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

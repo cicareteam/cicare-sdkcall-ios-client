@@ -6,7 +6,8 @@ target 'CiCareCall' do
   use_frameworks!
 
   # Pods for CiCareCall
-  pod 'CiCareSDKCallIOS', :path => 'CicareSdkCall/CiCareSDKCallIOS.podspec'
+  pod 'CiCareSDKCallIOS', :path => '../CicareSdkCall/CiCareSDKCallIOS.podspec'
+  pod 'FittedSheets'
 
   target 'CiCareCallTests' do
     inherit! :search_paths

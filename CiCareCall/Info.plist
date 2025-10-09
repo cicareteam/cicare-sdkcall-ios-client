@@ -2,16 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>aps-environtment</key>
-	<string>development</string>
-	<key>NSMicrophoneUsageDescription</key>
-	<string>use for call</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>voip</string>
-		<string>remote-notification</string>
-		<string>processing</string>
-		<string>fetch</string>
+		<string>audio</string>
 	</array>
+	<key>aps-environtment</key>
+	<string>production</string>
 </dict>
 </plist>

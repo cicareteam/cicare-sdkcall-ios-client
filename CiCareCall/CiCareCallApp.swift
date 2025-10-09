@@ -20,7 +20,7 @@ struct CiCareCallApp: App {
 
     init() {
             // Start PushKit manager
-            VoipManager.shared
+            //VoipManager.shared
         }
     
     var body: some Scene {
