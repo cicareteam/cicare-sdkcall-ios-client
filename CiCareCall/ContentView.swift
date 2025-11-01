@@ -182,7 +182,11 @@ struct LoginView: View {
     }
 }
 
-class MyViewController: UIViewController {
+class MyViewController: UIViewController, CallEventListener {
+    func onCallStateChanged(_ state: CiCareSDKCall.CallStatus) {
+        print("state call \(state)")
+    }
+    
 
     private let titleLabel = UILabel()
     private let closeButton = UIButton(type: .system)
@@ -244,9 +248,12 @@ struct CallView: View {
                 .tint(.red)
             }
             
+            let controller = MyViewController()
+            
             if isLoading {
                 ProgressView("Loading users...")
             } else {
+                
                 List(users, id: \.id) { user in
                     HStack {
                         AsyncImage(url: URL(string: user.avatar)) { img in
@@ -271,8 +278,8 @@ struct CallView: View {
                 }
             }
             Button("Show Sheet") {
-                let controller = MyViewController()
-
+                
+                CicareSdkCall.shared.delegate = controller
                 SheetManager.shared.presentSheet(controller)
             }
         }
@@ -325,7 +332,7 @@ struct CallView: View {
     
     func makeCall(to user: (id: String, name: String, avatar: String)) {
         // Setup API pakai token login
-        CicareSdkCall.shared.setAPI(baseUrl: "https://sip-gw.c-icare.cc:8443", token: "a1b2c3d4e5f60718293a4b5c6d7e8f90123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef")
+        CicareSdkCall.shared.setAPI(baseUrl: "https://sip-gw.c-icar.cc:8443", token: "a1b2c3d4e5f60718293a4b5c6d7e8f90123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef")
         
         CicareSdkCall.shared.outgoing(
             callerId: "\(currentUserId)",
@@ -334,11 +341,18 @@ struct CallView: View {
             calleeId: user.id,
             calleeName: user.name,
             calleeAvatar: user.avatar,
-            checkSum: "asdfasdf",
+            checkSum: "8635963703098078865f1761806714000",
             metaData: [
                 "call_title": "Free Call",
                 "call_not_found": "Call not found"
             ]
-        )
+        ) { result in
+            switch result {
+                case .success:
+                    print("Call success")
+                case .failure(let error):
+                print("Error:", error.numericCode, error.localizedDescription)
+                }
+        }
     }
 }

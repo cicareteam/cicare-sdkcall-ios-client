@@ -1,7 +1,7 @@
 {
   "name": "CiCareSDKCallIOS",
   "module_name": "CiCareSDKCall",
-  "version": "1.2.1-rc.11",
+  "version": "1.2.1-rc.23",
   "summary": "SDK for calling app to app webrtc.",
   "description": "CiCareSDKCall is a SDK for calling app to app or app to phone via webrtc.",
   "homepage": "https://github.com/cicareteam/cicare-sdkcall-ios",
@@ -22,12 +22,12 @@
   ],
   "source": {
     "git": "https://github.com/cicareteam/cicare-sdkcall-ios.git",
-    "tag": "1.2.1-rc.11"
+    "tag": "1.2.1-rc.23"
   },
   "source_files": "Sources/CicareSdkCall/**/*.{swift,h,m}",
   "resource_bundles": {
     "CiCareSDKCall": [
-      "Sources/CicareSdkCall/Resources/Media.xcassets"
+      "Sources/CicareSdkCall/Media.xcassets"
     ]
   },
   "dependencies": {

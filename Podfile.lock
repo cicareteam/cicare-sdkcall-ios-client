@@ -1,5 +1,5 @@
 PODS:
-  - CiCareSDKCallIOS (1.2.1-rc.11):
+  - CiCareSDKCallIOS (1.2.1-rc.23):
     - CryptoSwift (= 1.8.4)
     - Socket.IO-Client-Swift (= 16.1.1)
     - Starscream (= 4.0.8)
@@ -28,7 +28,7 @@ EXTERNAL SOURCES:
     :path: "../CicareSdkCall/CiCareSDKCallIOS.podspec"
 
 SPEC CHECKSUMS:
-  CiCareSDKCallIOS: b12919957c504cc390c80eb3083e3d0dad99c320
+  CiCareSDKCallIOS: 78d691c07f051da43a43a00b3ba9dc5edef23f57
   CryptoSwift: e64e11850ede528a02a0f3e768cec8e9d92ecb90
   FittedSheets: 38ec85129bf5c970f99d4dba4fbf48185c5fa98a
   Socket.IO-Client-Swift: 3614bea82ba005df1c2ff01154f4004993e05ad7
