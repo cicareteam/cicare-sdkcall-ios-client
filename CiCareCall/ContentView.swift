@@ -13,7 +13,7 @@ struct ContentView: View {
     @State private var loginError: String? = nil   // <-- untuk menampilkan error
     
     var body: some View {
-        NavigationStack {
+        NavigationView {
             if isLoggedIn {
                 CallView(
                     currentUserId: currentUserId,
@@ -332,7 +332,7 @@ struct CallView: View {
     
     func makeCall(to user: (id: String, name: String, avatar: String)) {
         // Setup API pakai token login
-        CicareSdkCall.shared.setAPI(baseUrl: "https://sip-gw.c-icar.cc:8443", token: "a1b2c3d4e5f60718293a4b5c6d7e8f90123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef")
+        CicareSdkCall.shared.setAPI(baseUrl: "https://gsm-sdk.c-icare.cc", token: "a1b2c3d4e5f60718293a4b5c6d7e8f90123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef")
         
         CicareSdkCall.shared.outgoing(
             callerId: "\(currentUserId)",

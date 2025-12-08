@@ -6,7 +6,7 @@ target 'CiCareCall' do
   use_frameworks!
 
   # Pods for CiCareCall
-  pod 'CiCareSDKCallIOS', '~> 1.2.1-rc.25' #:path => '../CicareSdkCall/CiCareSDKCallIOS.podspec'
+  pod 'CiCareSDKCallIOS', :path => '../CicareSdkCall/CiCareSDKCallIOS.podspec'
   pod 'FittedSheets'
 
   target 'CiCareCallTests' do
