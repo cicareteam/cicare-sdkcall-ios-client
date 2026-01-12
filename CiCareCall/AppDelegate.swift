@@ -1,16 +1,9 @@
 import UIKit
 import UserNotifications
+import FirebaseCore
 
 class AppDelegate: NSObject, UIApplicationDelegate, UNUserNotificationCenterDelegate {
-
-    func application(
-        _ application: UIApplication,
-        didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil
-    ) -> Bool {
-        registerForPushNotifications()
-        return true
-    }
-
+    
     private func registerForPushNotifications() {
         let center = UNUserNotificationCenter.current()
         center.delegate = self
@@ -42,6 +35,67 @@ class AppDelegate: NSObject, UIApplicationDelegate, UNUserNotificationCenterDele
     ) {
         print("Failed to register for APNs: \(error.localizedDescription)")
     }
+
+    func application(
+            _ application: UIApplication,
+            didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
+        ) -> Bool {
+            registerForPushNotifications()
+            //FirebaseApp.configure()
+            UNUserNotificationCenter.current().delegate = self
+
+            return true
+        }
+
+        // FCM received (foreground)
+        func userNotificationCenter(
+            _ center: UNUserNotificationCenter,
+            willPresent notification: UNNotification,
+            withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void
+        ) {
+            handleFCMData(notification.request.content.userInfo)
+            completionHandler([.banner, .sound])
+        }
+
+        // FCM received (background / tapped)
+        func userNotificationCenter(
+            _ center: UNUserNotificationCenter,
+            didReceive response: UNNotificationResponse,
+            withCompletionHandler completionHandler: @escaping () -> Void
+        ) {
+            handleFCMData(response.notification.request.content.userInfo)
+            completionHandler()
+        }
     
-    
+}
+
+extension AppDelegate {
+
+    private func handleFCMData(_ userInfo: [AnyHashable: Any]) {
+        guard let type = userInfo["type"] as? String else { return }
+
+        switch type {
+        case "chat_message":
+            NotificationCenter.default.post(
+                name: .chatMessageReceived,
+                object: nil,
+                userInfo: userInfo
+            )
+
+        case "post_update":
+            NotificationCenter.default.post(
+                name: .postUpdated,
+                object: nil,
+                userInfo: userInfo
+            )
+
+        default:
+            break
+        }
+    }
+}
+
+extension Notification.Name {
+    static let chatMessageReceived = Notification.Name("chatMessageReceived")
+    static let postUpdated = Notification.Name("postUpdated")
 }

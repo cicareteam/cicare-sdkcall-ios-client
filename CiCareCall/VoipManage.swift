@@ -30,7 +30,7 @@ class VoipManager: NSObject, PKPushRegistryDelegate {
         for type: PKPushType
     ) {
         let voipToken = pushCredentials.token.map { String(format: "%02x", $0) }.joined()
-        //print("VoIP Token: \(voipToken)")
+        print("VoIP Token: \(voipToken)")
         sendTokenToServer(voipToken)
         NotificationCenter.default.post(name: .voipTokenUpdated, object: voipToken)
     }
@@ -49,14 +49,19 @@ class VoipManager: NSObject, PKPushRegistryDelegate {
         }
         //SheetManager.shared.dismissActiveSheet()
         print("Incoming notification")
+        
         var metaData:[String:String] = [:]
         let callerId: String = payload.dictionaryPayload["callerId"] as! String
         let avatar: String = payload.dictionaryPayload["callerAvatar"] as! String
         let callerName: String = payload.dictionaryPayload["callerName"] as! String
         metaData["alert_data"] = payload.dictionaryPayload["alert_data"] as? String
+        
+        
+        
         CicareSdkCall.shared.incoming(callerId: callerId, callerName: callerName, callerAvatar: avatar, calleeId: "", calleeName: "", calleeAvatar: "", checkSum: "", metaData: metaData) {
             print("message clicked")
         }
+        //CallKitManager.shared.reportIncomingCall(from: callerName)
         completion() // jangan lupa panggil completion
     }
     

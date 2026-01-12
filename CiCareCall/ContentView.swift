@@ -182,7 +182,7 @@ struct LoginView: View {
     }
 }
 
-class MyViewController: UIViewController, CallEventListener {
+class MyViewController: UIViewController, CiCareSDKCall.CallEventListener {
     func onCallStateChanged(_ state: CiCareSDKCall.CallStatus) {
         print("state call \(state)")
     }
@@ -193,7 +193,7 @@ class MyViewController: UIViewController, CallEventListener {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+     
         view.backgroundColor = .systemBackground
 
         // Title
@@ -250,6 +250,8 @@ struct CallView: View {
             
             let controller = MyViewController()
             
+            
+            
             if isLoading {
                 ProgressView("Loading users...")
             } else {
@@ -292,6 +294,9 @@ struct CallView: View {
     private func fetchUsers() {
         guard let url = URL(string: "https://sip-gw.c-icare.cc:4443/api/user-online?user_id=\(currentUserId)") else { return }
         
+        CicareSdkCall.shared.activateCallService()
+        CicareSdkCall.shared.setAPI(baseUrl: "https://gsm-sdk.c-icare.cc", token: "a1b2c3d4e5f60718293a4b5c6d7e8f90123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef")
+
         
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
@@ -332,7 +337,6 @@ struct CallView: View {
     
     func makeCall(to user: (id: String, name: String, avatar: String)) {
         // Setup API pakai token login
-        CicareSdkCall.shared.setAPI(baseUrl: "https://gsm-sdk.c-icare.cc", token: "a1b2c3d4e5f60718293a4b5c6d7e8f90123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef")
         
         CicareSdkCall.shared.outgoing(
             callerId: "\(currentUserId)",

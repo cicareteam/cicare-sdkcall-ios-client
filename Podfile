@@ -8,6 +8,9 @@ target 'CiCareCall' do
   # Pods for CiCareCall
   pod 'CiCareSDKCallIOS', :path => '../CicareSdkCall/CiCareSDKCallIOS.podspec'
   pod 'FittedSheets'
+  pod 'FirebaseAnalytics'
+  pod 'FirebaseAuth'
+  pod 'FirebaseFirestore'
 
   target 'CiCareCallTests' do
     inherit! :search_paths
